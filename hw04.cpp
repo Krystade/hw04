@@ -12,14 +12,14 @@
 int main() {
 	Date* date = new Date(10, 29, 1998);
 
-	cout << "Employees" << endl << endl;
+	//cout << "Employees" << endl << endl;
 	Employee* e1 = new Employee();
 	Employee* e2 = new Employee("Joe", 78, "9491233523", 55, 'M', "Janitor", 100000, date);
 	/*e1->print();
 	e2->print();
 	cout << endl << endl;*/
 
-	cout << "Programmers" << endl << endl;
+	//cout << "Programmers" << endl << endl;
 	Programmer* p1 = new Programmer();
 	/*Programmer* p2 = new Programmer("Carl", 45, "63444442363", 30, 'M', "Back-end Developer", 1000000, date, 20, "Riley", 5.5, true, false);
 	p1->print();
@@ -46,15 +46,28 @@ int main() {
 	cout << "comparePhone(e1, p1): " << comparePhone(*e1, *p1) << endl;
 	cout << "e1 == e2: " << (*e1 == *e2) << endl;
 
+	cout << endl << endl;
+	
 	// 3.
 	e2->addAge(5);
+
+	cout << endl << endl;
 
 	// 4.
 	e2 = (e2 + 10);
 	e2->print();
 
-	// 5.
+	cout << endl << endl;
 
+	// 5.
+	Employee e3;
+	cout << "print e1" << endl;
+	cout << *e1;
+	cout << "\nInput data to e3" << endl;
+	cin >> e3;
+	cout << e3;
+
+	cout << endl << endl;
 
 	// extra credit.
 

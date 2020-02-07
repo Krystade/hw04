@@ -2,10 +2,10 @@ CC = g++
 Flags = -std=c++14 - Wall - g
 OBJS = Date.o Employee.o Programmer.o SoftwareArchitect.o
 
-all: hw03
+all: hw04
 
-hw03: hw03.cpp Date.o Employee.o Programmer.o SoftwareArchitect.o
-	$(CC) $(FLAGS) hw03.cpp -o hw03 $(OBJS)
+hw04: hw04.cpp Date.o Employee.o Programmer.o SoftwareArchitect.o
+	$(CC) $(FLAGS) hw04.cpp -o hw04 $(OBJS)
 
 Date.o: Date.cpp Date.h
 	$(CC) $(FLAGS) -c Date.cpp -o Date.o
@@ -20,7 +20,7 @@ SoftwareArchitect.o: SoftwareArchitect.cpp SoftwareArchitect.h
 	$(CC) $(FLAGS) -c SoftwareArchitect.cpp -o SoftwareArchitect.o
 
 clean:
-	rm*.o hw03 hw03.tar
+	rm*.o hw04 hw04.tar
 
 tar:
-	tar cf hw03.tar hw03.scr makefile hw03.cpp Date.cpp Date.h Employee.cpp Employee.h Programmer.cpp Programmer.h SoftwareArchitect.cpp SoftwareArchitect.h 
+	tar cf hw04.tar hw04.scr makefile hw04.cpp Date.cpp Date.h Employee.cpp Employee.h Programmer.cpp Programmer.h SoftwareArchitect.cpp SoftwareArchitect.h 

@@ -16,20 +16,22 @@ class Programmer;
 
 class Employee{
 	friend bool comparePhone(Employee&, Programmer&);
+	friend ostream& operator<<(ostream& out, const Employee employee);
+	friend istream& operator>>(istream& in, const Employee employee);
 public:
 	Employee();
 	Employee(string name, int id, string phone, int age, char gender, string title, int salary, Date* hireDate);
 	void print();
 	void addAge(int input);
 
-	string getName(){return name;}
-	int getId(){return id;}
-	string getPhone(){return phone;}
-	int getAge(){return age;}
-	char getGender(){return gender;}
-	string getTitle(){return title;}
-	int getSalary(){return salary;}
-	Date* getHireDate(){return hireDate;}
+	string getName() const{return name;}
+	int getId() const{return id;}
+	string getPhone() const{return phone;}
+	int getAge() const{return age;}
+	char getGender() const{return gender;}
+	string getTitle() const{return title;}
+	int getSalary() const{return salary;}
+	Date* getHireDate() const{return hireDate;}
 
 	void setName(string name){this->name = name;}
 	void setId(int id){this->id = id;}
@@ -52,5 +54,7 @@ private:
 	int salary;
 	Date* hireDate;
 };
+
+
 
 #endif /* EMPLOYEE_H_ */
