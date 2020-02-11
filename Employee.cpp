@@ -15,7 +15,7 @@ Employee::Employee(){
 	gender = 'M';
 	title = "";
 	salary = 0;
-	hireDate = new Date();
+	hireDate = new Date(0, 0, 0);
 }
 Employee::Employee(string name, int id, string phone, int age, char gender, string title, int salary, Date* hireDate){
 	this->name = name;
@@ -27,6 +27,7 @@ Employee::Employee(string name, int id, string phone, int age, char gender, stri
 	this->salary = salary;
 	this->hireDate = hireDate;
 }
+
 
 void Employee::print(){
 	cout << "Name: " << name << "\nID: " << id << "\nPhone: " << phone << "\nAge: " << age;
@@ -47,16 +48,46 @@ Employee Employee::operator+(int input){
 	return *this;
 }
 
-ostream& operator<<(ostream& out, const Employee employee){
+Employee& Employee::operator++(){
+	++this->age;
+	return *this;
+}
+
+Employee Employee::operator++(int){
+	Employee copy(*this);
+	++(*this);
+	return copy;
+}
+
+ostream& operator<<(ostream& out, const Employee& employee){
 	out << "Name: " << employee.name << "\nID: " << employee.id << "\nPhone: " << employee.phone 
 		<< "\nAge: " << employee.age << "\nGender: " << employee.gender << "\nJob Title: " 
-		<< employee.title << "\nSalary: $" << employee.salary << endl;
+		<< employee.title << "\nSalary: $" << employee.salary <<  endl;
+	employee.hireDate->print();
 	return out;
 }
 
-istream& operator>>(istream& in, Employee employee){
+istream& operator>>(istream& in, Employee& employee){
+	cout << "Enter Employee's name: ";
+	in >> employee.name;
+	cout << "Enter Employee's ID: ";
+	in >> employee.id;
+	cout << "Enter Employee's phone: ";
+	in >> employee.phone;
 	cout << "Enter Employee's age: ";
 	in >> employee.age;
+	cout << "Enter Employee's gender: ";
+	in >> employee.gender;
+	cout << "Enter Employee's title: ";
+	in >> employee.title;
+	cout << "Enter Employee's salary: ";
+	in >> employee.salary;
+	cout << "Enter Employee's month hired: ";
+	in >> employee.hireDate->month;
+	cout << "Enter Employee's day hired: ";
+	in >> employee.hireDate->day;
+	cout << "Enter Employee's year hired: ";
+	in >> employee.hireDate->year;
 	cout << endl;
 
 	return in;
@@ -68,7 +99,7 @@ istream& operator>>(istream& in, Employee employee){
 
 
 
-
+//
 
 
 

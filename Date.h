@@ -11,11 +11,18 @@
 #include <iostream>
 using namespace std;
 
+class Employee;
+
 class Date{
+	friend istream& operator>>(istream& in, Employee& employee);
 public:
 	Date();
 	Date(int m, int d, int y);
 	void print();
+
+	int getMonth(){return month;}
+	int getDay(){return day;}
+	int getYear(){return year;}
 private:
 	int month;
 	int day;

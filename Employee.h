@@ -16,8 +16,8 @@ class Programmer;
 
 class Employee{
 	friend bool comparePhone(Employee&, Programmer&);
-	friend ostream& operator<<(ostream& out, const Employee employee);
-	friend istream& operator>>(istream& in, const Employee employee);
+	friend ostream& operator<<(ostream& out, const Employee& employee);
+	friend istream& operator>>(istream& in, Employee& employee);
 public:
 	Employee();
 	Employee(string name, int id, string phone, int age, char gender, string title, int salary, Date* hireDate);
@@ -44,6 +44,8 @@ public:
 
 	bool operator==(Employee& otherEmployee) {return this->getPhone() == otherEmployee.getPhone();}
 	Employee operator+(int);
+	Employee& operator++();
+	Employee operator++(int);
 private:
 	string name;
 	int id;
