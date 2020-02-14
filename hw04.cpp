@@ -8,8 +8,9 @@
 #include "hw04.h"
 
 int main() {
+	//Create Date object pointer
 	Date* date = new Date(10, 29, 1998);
-
+	//Create pointers to two employee objects and a programmer object to be used later
 	Employee* p_e1 = new Employee();
 	Employee* p_e2 = new Employee("Joe", 78, "9491233523", 55, 'M', "Janitor", 100000, date);
 	Programmer* p_p1 = new Programmer();
