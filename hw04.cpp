@@ -1,9 +1,7 @@
 //============================================================================
 // Name        : hw03.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Author      : Jack Schmid -- CS1C T/Th 3:30-5:50 -- Professor Kath
+// Description : Program to practice Friend Functions & Operator Overloading in C++, Ansi-style
 //============================================================================
 
 
@@ -74,7 +72,9 @@ int main() {
 	cout << "Post-Incrementing incurs the most overhead because it keeps a copy of the previous value." << endl;
 	return 0;
 }
-
+//Function too compare the phone numbers of an employee object and a programmer object
+//Input is one employee object and one programmer object
+//Output is a boolean statement of whether or not the phone numbers of the two objects are the same
 bool comparePhone(Employee& employee, Programmer& programmer){
 	return((employee.getPhone() == programmer.getPhone()));
 }
