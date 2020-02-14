@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : hw03.cpp
+// Name        : hw04.cpp
 // Author      : Jack Schmid -- CS1C T/Th 3:30-5:50 -- Professor Kath
 // Description : Program to practice Friend Functions & Operator Overloading in C++, Ansi-style
 //============================================================================
